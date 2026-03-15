@@ -108,7 +108,7 @@ st.subheader("Make a guess")
 
 st.info(
     f"Guess a number between 1 and 100. "
-    f"Attempts left: {attempt_limit - st.session_state.attempts}"
+    f"Attempts left: {attempt_limit - st.session_state.attempts}" #FIX ME: Possible cause of the "Out of attempts" message displaying too early.
 )
 
 with st.expander("Developer Debug Info"):
@@ -162,7 +162,8 @@ if submit:
             secret = st.session_state.secret
 
         outcome, message = check_guess(guess_int, secret)
-
+        
+        # FIX ME: Possible cause of the hints displaying wrong:
         if show_hint:
             st.warning(message)
 
