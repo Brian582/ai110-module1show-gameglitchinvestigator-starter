@@ -22,6 +22,9 @@ Bug 3: When I click the "New game" button, the game doesnt reset.
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
+I used Claude Code for this project. 
+A correct AI suggestion I got was when I was fixing the bug for getting wrong hints. Claude that 2 issues was causing this; The hint messages were swapped and Secret was cast to string on even attempts. I verified these results by letting Claude add the code it suggested to fix the bug and then I played the game again to see if the hint bug was fixed and it was. 
+During this project, I didnt get an incorrect or mislead suggestion from Claude. So far, everything it explained/suggested made sense or work.
 
 ## 3. Debugging and testing your fixes
 
@@ -31,6 +34,8 @@ Bug 3: When I click the "New game" button, the game doesnt reset.
 - Did AI help you design or understand any tests? How?
 
 ---
+I decided a bug was really fixed by either I playing the game again or using pytest. For example, I used pytest to see if I fixed the bug about the "Out of attempts" message being displayed to early. Claude helped me create the pytest function and explain how pytest was used to test parts of the code. When I ran the pytest, it said that 3 tests failed and 1 test passed which was the pytest function Claude generated. This was how I saw that the bug was fixed. I also used Claude to fix the other pytest functions. It added another variable to unpack the tuple returned by the check_guess function.
+
 
 ## 4. What did you learn about Streamlit and state?
 
